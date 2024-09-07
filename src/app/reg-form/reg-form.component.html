@@ -1,0 +1,108 @@
+<div class="main-div">
+    <form class="form" [formGroup]="regform" (ngSubmit)="onSubmit()">
+        <div class="field">
+            <label class="label">First Name:</label>
+            <input type="text" onkeydown="return /[A-Za-z]/i.test(event.key)" placeholder="John" formControlName="firstName"
+            [class.invalid]="regform.get('firstName')?.invalid&&regform.get('firstName')?.hasError('Required') &&regform.get('firstName')?.dirty"
+            />
+        </div>
+        @if (regform.get('firstName')?.invalid&&regform.get('firstName')?.dirty) 
+            {
+                <span class="error">This Field is Required</span>
+            }
+        <div class="field">
+            <label class="label">Last Name:</label>
+            <input type="text" onkeydown="return /[A-Za-z]/i.test(event.key)" placeholder="Doe" formControlName="lastName"
+            [class.invalid]="regform.get('lastName')?.invalid &&regform.get('lastName')?.dirty"
+            />
+        </div>
+        @if (regform.get('lastName')?.invalid && regform.get('lastName')?.dirty) 
+            {
+                <span class="error">This is Required</span>
+            }
+        <div class="field">
+            <label class="label">Email:</label>
+            <input type="email" placeholder="Johndoe@email.com" formControlName="email"
+            [class.invalid]="regform.get('email')?.invalid &&regform.get('email')?.dirty"
+            />
+        </div>
+        @if (regform.get('email')?.invalid && regform.get('email')?.dirty) 
+        {
+            <span class="error">This is Required</span>
+        }
+        <div class="field">
+            <label class="label">Phone:</label>
+            <input type="text"  onkeydown="return /[0-9]/i.test(event.key)" minlength="10"  maxlength="10" placeholder="1234567890" formControlName="phone"
+            [class.invalid]="regform.get('phone')?.invalid &&regform.get('phone')?.dirty"
+            />
+        </div>
+        @if (regform.get('phone')?.invalid && regform.get('phone')?.dirty) 
+        {
+            <span class="error">This is Required</span>
+        }
+
+        <div class="field">
+            <label class="label">Country:</label>
+            <select class="country" formControlName="country">
+                @for (item of countries; track $index) 
+                {
+                    <option [value]="item.label" class="selitem">{{item.label}}</option>
+                }
+            </select>
+        </div>
+        @if (regform.get('country')?.invalid && regform.get('country')?.dirty) 
+        {
+            <span class="error">This is Required</span>
+        }
+
+        <div class="field">
+            <label class="label">State:</label>
+            <select class="country" formControlName="state">
+                @for (item of states; track $index) 
+                {
+                    <option [value]="item.label" class="selitem">{{item.label}}</option>
+                }
+            </select>
+        </div>
+        @if (regform.get('state')?.invalid && regform.get('state')?.dirty) 
+        {
+            <span class="error">This is Required</span>
+        }
+
+        <div class="field">
+            <label class="label">City:</label>
+            <select class="country" formControlName="city">
+                @for (item of city; track $index) 
+                {
+                    <option [value]="item.label" class="selitem">{{item.label}}</option>
+                }
+            </select>
+        </div>
+        @if (regform.get('country')?.invalid && regform.get('country')?.dirty) 
+        {
+            <span class="error">This is Required</span>
+        }
+        
+       
+        <div class="field">
+            <label class="label">Code:</label>
+            <input type="text" minlength="6"  maxlength="6" onkeydown="return /[0-9]/i.test(event.key)" placeholder="1234567890" formControlName="code"
+            [class.invalid]="regform.get('code')?.invalid &&regform.get('code')?.dirty"
+            />
+        </div>
+        @if (regform.get('code')?.invalid && regform.get('code')?.dirty) 
+            {
+                <span class="error">This is Required</span>
+            }
+        <div class="buttonss">
+            <button type="reset" class="resbutton">Reset</button>
+            <button type="submit" [ngClass]="regform.valid?'validButton':'invalidButton'"
+            >Register</button>
+        </div>
+        @if ((regform.invalid) && (regform.dirty) )
+            {
+                <span class="error">Form Invalid</span>
+            }
+        @else if (regform.valid) {<span class="formvalid">Form Valid</span>}
+    </form>
+</div>

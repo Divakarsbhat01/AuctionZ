@@ -1,0 +1,42 @@
+<div class="main_div">
+    <div class="First_div" >
+        <div class="Auctioneer_div">
+            <button class="Auctioneer_Button" (click)="set_user('AU')">I am an Auctioneer</button>
+        </div>
+        <div class="Bidder_div" >
+            <button class="Bidder_Button" (click)="set_user('BI')">I am a Bidder</button>
+        </div>
+        <div class="Register_div">
+            <button class="Register_Button" (click)="set_action('RU')">Register</button>
+        </div>
+        <div class="Signin_div">
+            <button class="Signin_Button" (click)="set_action('SI')">SignIn</button>
+        </div>
+        <div class="warning1div"  #warnd1>
+            <label class="warning1label" #warnd1l>Warning</label>
+        </div>
+    </div>
+    <div class="Second_div" #secondd>
+        <div class="Signinl_div" >
+            <label class="Signin_label">Sign In</label>
+        </div>
+        <div class="userid_div">
+            <input class="userid_input" type="text" placeholder="Your User ID" #uinp>
+        </div>
+        <div class="password_div">
+            <input class="password_input" type="password" placeholder="Your Email" #upass>
+        </div>
+        <div class="buttons_div">
+            <div class="reset_div" (click)="reset()">
+                <button type="reset">Reset</button>
+            </div>
+            <div class="submit_div">
+                <button type="submit" (click)="submit()">Submit</button>
+            </div>
+        </div>
+        <div class="warning_div" #seconddw>
+            <label class="Warning_Label" #seconddwl>Warning</label>
+        </div>
+    </div>
+</div>
+

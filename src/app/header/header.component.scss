@@ -1,0 +1,40 @@
+.header{
+    background-color: rgb(236, 151, 236);
+    display: flex;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    justify-content: end;
+}
+.All_Products_Div,.See_Open_Bids_Div
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.All_Products_Button,.See_Open_Bids_Button
+{
+    height: 30px;
+    width: 120px;
+    border: 1px solid white;
+    background-color: rgb(64, 126, 241);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+.All_Products_Button:hover,.See_Open_Bids_Button:hover
+{
+    background-color: rgb(34, 93, 202);
+    font-weight: bold;
+}
+.See_Open_Bids_Button
+{
+    width: 170px;
+}

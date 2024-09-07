@@ -1,0 +1,114 @@
+.main-div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form
+{
+    //background-color: rgb(236, 151, 236);
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 600px;
+    width: 700px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid  rgb(236, 151, 236);
+}
+.field
+{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.label
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    height: 30px;
+    width: 90px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttonss
+{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(236, 151, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resbutton
+{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(64, 126, 235);
+    color: white;
+    border: 1px solid white;
+    margin-right: 30px;
+}
+.validButton
+{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(64, 126, 235);
+    color: white;
+    border: 1px solid white;
+    margin-right: 40px;
+}
+.invalidButton
+{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(230, 245, 17);
+    color: rgb(153, 11, 11);
+    border: 1px solid white;
+    margin-left: 40px;
+    visibility: hidden;
+}
+input{
+    font-weight: 500;
+    border: 1px solid white;
+    height: 30px;
+    border-radius: 8px;
+}
+select{
+    height: 30px;
+    width: 170px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+.invalid
+{
+    border: 1px solid red;
+}
+.error 
+{
+    color: red;
+}
+span{
+    display: block;
+    background-color: yellow;
+    width: 200px;
+    height: 20px;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+}
+.formvalid
+{
+    background-color: lightgreen;
+    color: white;
+}

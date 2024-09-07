@@ -1,0 +1,11 @@
+<app-header></app-header>
+<app-logo></app-logo>
+<h3 class="heading">{{user_type}} Registration</h3>
+@if(!is_successfully_submitted)
+{
+    <app-reg-form (newItemEvent)="jsonreceived($event)"></app-reg-form>
+}
+@else
+{
+    <app-prdf [form_inp]="formatted_data" [user_role]="user_type" [user_id]="userid"></app-prdf>
+}
